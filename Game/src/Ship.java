@@ -2,7 +2,6 @@ public class Ship {
 
     int occupiedSpaces;
     boolean ifSunk;
-    //int[][] coordinates; //first y - wiersz then x - kolumn
     boolean ifVertical;
     Square[] squares;
 

@@ -1,6 +1,10 @@
 public class Ocean {
 
     Square[][] squares;
+    // coordinates 0,0 is on the left top corner
+    // column are letters (x)
+    // rows are numbers (y)
+    // squares[y][x]
 
     Ocean(){
         squares = new Square[10][10];
