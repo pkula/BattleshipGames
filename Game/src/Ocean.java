@@ -1,3 +1,4 @@
+
 import java.util.*;
 public class Ocean {
 
@@ -29,7 +30,6 @@ public class Ocean {
                     squares[i][8].getValue() + "|" + squares[i][9].getValue() + "|");
         }
     }
-
     Square chooseField(int x, int y) {
         return squares[y][x];
     }
@@ -75,4 +75,14 @@ public class Ocean {
     }
 
 
+    public boolean ifRightField(String coordinates){
+        if (chooseField(coordinates).getValue().equals("_")){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
+
+

@@ -20,7 +20,7 @@ public class Ship {
         return false;
     }
 
-    public String chooseMessageAndHit(Square s){
+    public String getMessageAndHit(Square s){
         if (checkIfHit(s)){
             if (squares.size() == 0){
                 System.out.println("Hit and sink");
