@@ -11,6 +11,7 @@ public class Ship {
         for (int i=0;i<squares.size();i++){
             if (squares.get(i) == s){
                 s.hit();
+                squares.remove(i);
                 return true;
             }else{
                 s.miss();
@@ -19,6 +20,19 @@ public class Ship {
         return false;
     }
 
+    public String chooseMessageAndHit(Square s){
+        if (checkIfHit(s)){
+            if (squares.size() == 0){
+                System.out.println("Hit and sink");
+                return "Hit and sink";
+            }
+            System.out.println("Hit");
+            return "Hit";
+        }else{
+            System.out.println("Miss");
+            return "Miss";
+        }
+    }
 
 }
 
