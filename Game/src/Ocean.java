@@ -1,3 +1,4 @@
+import java.util.*;
 public class Ocean {
 
     Square[][] squares;
@@ -73,26 +74,13 @@ public class Ocean {
         return squares[y][x];
     }
 
-    void miss(int x, int y){
-        chooseField(x,y).miss();
+
+    void changeField(String coordinates){
+        for (int i = 0;i<ships.length;i++){
+            if(ships[i].checkIfHit(chooseField(coordinates))){
+                return;
+            }
+        }
     }
-
-    void miss(String coordinates){
-        chooseField(coordinates).miss();
-    }
-
-    void hit(int x, int y){
-        chooseField(x,y).hit();
-    }
-
-    void hit(String coordinates){
-        chooseField(coordinates).hit();
-    }
-
-    getSquare(int x, int y){
-        return squares[y][x];
-    }
-
-
 
 }
